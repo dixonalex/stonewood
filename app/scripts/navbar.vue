@@ -11,7 +11,7 @@
 				        <span class="icon-bar"></span>
 					</button>
 					<div class="site-logo">
-						<a href="#"><img src="images/logo-nav.png"></a>
+						<a href="#"><img class="logo-nav"></a>
 					</div>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,7 +50,13 @@ export default {
 	$breakpoint-sm-desktop: 1068px;
 	$breakpoint-tablet: 768px;
 	$breakpoint-phone: 480px;
+	$breakpoint-iphone6: 400px;
+	$logo-fullsize: "images/logo-nav.png";
+	$logo-phone: "images/logo-nav-iphone.png";
 
+	.logo-nav {
+		content:url("images/logo-nav.png");
+	}
 	.header {
 		margin-bottom: 0;
 	}
@@ -143,6 +149,15 @@ export default {
 		//Remove padding on navbar third element spacing to center
 		li:nth-child(3) {
 		    margin-right: 0 !important;
+		}
+	}
+	@media(max-width:$breakpoint-iphone6){
+		.logo-nav {
+			content:url("images/logo-nav-iphone.png");
+		}
+		.site-logo{
+			margin-left: -140px;
+			top: 10px;
 		}
 	}
 </style>

@@ -59,6 +59,7 @@ export default {
 	$breakpoint-tablet: 768px;
 	$breakpoint-phone: 480px;
 	$breakpoint-iphone6: 400px;
+	$breakpoint-iphone5: 320px;
 
 	div.carousel-inner {
 		max-height:800px;
@@ -120,8 +121,11 @@ export default {
 			h1 {
 			    font-size: 18px;
 			}
+			button.btn {
+				font-size: 12px;
+			}
 	}
-	@media(max-width: $breakpoint-iphone6){
+	@media(min-width: $breakpoint-iphone5) and (max-width: $breakpoint-iphone6){
 		div.carousel-caption {
 			bottom: 5%;
 		}
@@ -131,6 +135,24 @@ export default {
 			}
 			h1 {
 			    font-size: 16px;
+			}
+			button.btn {
+				font-size: 12px;
+			}
+	}
+	@media(max-width: $breakpoint-iphone5) {
+		div.carousel-caption {
+			bottom: 2.5%;
+		}
+			.carousel-title {
+				line-height: 10px;
+			    font-size: 8px;
+			}
+			h1 {
+			    font-size: 14px;
+			}
+			button.btn {
+				font-size: 10px;
 			}
 	}
 </style>

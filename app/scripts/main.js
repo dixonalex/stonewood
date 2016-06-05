@@ -1,12 +1,13 @@
 const Vue = require('vue');
 const App = require('./app.vue');
-const foo = require('./foo');
-
-foo.speak();
+const Navbar = require('./navbar.vue');
+const Carousel = require('./carousel.vue');
 
 new Vue({
   el: 'body',
   components: {
-    app: App
+    app: App,    
+    navbar: Navbar,
+    carousel: Carousel
   }
 })

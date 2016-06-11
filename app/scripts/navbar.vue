@@ -17,12 +17,10 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav nav-pills">
 						<!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-						<li class="active"><a href="#">About<span class="sub-title">Our Culture</span></a></li>
-						<li><a href="#">Residential<span class="sub-title">Photo Gallery</span></a></li>
-						<li><a href="#">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
-						<li><a href="#">Design Tips<span class="sub-title">helpful resources</span></a></li>
-						<li><a href="#">Partners<span class="sub-title">quality vendors</span></a></li>
-						<li><a href="#">Contact <span class="sub-title">get in touch</span></a></li>
+						<li class="active"><a v-link="{ path: '/about' }">About<span class="sub-title">Our Culture</span></a></li>
+						<li><a v-link="{ path: '/residential' }">Residential<span class="sub-title">Photo Gallery</span></a></li>
+						<li><a v-link="{ path: '/multifamily' }">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
+						<li><a v-link="{ path: '/contact' }">Contact <span class="sub-title">get in touch</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -75,6 +73,7 @@ export default {
 	    width: 225px;
 	    top: 7.5px;
 	}
+	.nav { padding: 0 115px ;}
 	.nav > li > a {
 		padding: 10px 5px;
     	text-align: center;
@@ -124,7 +123,7 @@ export default {
 						    text-transform: lowercase;
 						    cursor: pointer;
 					}
-			li:nth-child(3) {
+			li:nth-child(2) {
 			    margin-right: 22.5em !important;
 			}
 			li.active

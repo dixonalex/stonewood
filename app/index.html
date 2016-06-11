@@ -21,6 +21,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.js"></script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -28,9 +29,7 @@
     <![endif]-->
 
     <navbar></navbar>
-    <carousel></carousel>
-    <vendors></vendors>
-    <contact></contact>
+    <router-view></router-view>
     <vfooter></vfooter>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

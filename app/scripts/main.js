@@ -5,16 +5,55 @@ const Vendors = require('./vendors.vue');
 const Contact = require('./contact.vue');
 const Footer = require('./footer.vue');
 
-new Vue({
-  el: 'body',
-  components: {   
-    navbar: Navbar,
-    carousel: Carousel,
-    vendors: Vendors,
-    contact: Contact,
-    vfooter: Footer
-  }
+Vue.use(VueRouter);
+
+var Home = Vue.extend({
+	template: `
+		<Carousel></Carousel>
+		<Vendors></Vendors>
+		<Contact></Contact>
+		`,
+	components: {
+		carousel: Carousel,
+	    vendors: Vendors,
+	    contact: Contact
+	}
 })
+
+var Foo = Vue.extend({
+    template: '<p>This is foo!</p>'
+})
+
+var Bar = Vue.extend({
+    template: '<p>This is bar!</p>'
+})
+
+var App = Vue.extend({
+	components:{
+		navbar: Navbar,
+		vfooter: Footer
+	}
+})
+
+var router = new VueRouter()
+
+router.redirect({
+  '/': '/home'
+})
+
+router.map({
+    '/foo': {
+        component: Foo
+    },
+    '/bar': {
+        component: Bar
+    },
+    '/home': {
+    	component: Home
+    }
+})
+
+router.start(App, 'body');
 
 $('.nav li a').on('click', function(){
    $('.nav').find('.active').removeClass('active');

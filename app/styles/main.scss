@@ -11,6 +11,19 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
+.route {
+  transition: all .5s ease;
+}
+
+.route-enter, .route-leave {
+  opacity: 0;
+  transform: translate3d(10px, 0, 0);
+}
+
+[v-cloak] {
+  display:none;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;

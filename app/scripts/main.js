@@ -7,7 +7,7 @@ const Footer = require('./footer.vue');
 
 Vue.use(VueRouter);
 
-var Home = Vue.extend({
+const Home = Vue.extend({
 	template: `
 		<Carousel></Carousel>
 		<Vendors></Vendors>
@@ -20,33 +20,47 @@ var Home = Vue.extend({
 	}
 })
 
-var Foo = Vue.extend({
-    template: '<p>This is foo!</p>'
+const About = Vue.extend({
+    template: '<p>This is about!</p>'
 })
 
-var Bar = Vue.extend({
-    template: '<p>This is bar!</p>'
+const Residential = Vue.extend({
+    template: '<p>This is residential!</p>'
 })
 
-var App = Vue.extend({
+const Multifamily = Vue.extend({
+    template: '<p>This is multifamily!</p>'
+})
+
+const ContactUs = Vue.extend({
+    template: '<p>This is contact-us!</p>'
+})
+
+const App = Vue.extend({
 	components:{
 		navbar: Navbar,
 		vfooter: Footer
 	}
 })
 
-var router = new VueRouter()
+const router = new VueRouter()
 
 router.redirect({
   '/': '/home'
 })
 
 router.map({
-    '/foo': {
-        component: Foo
+    '/about': {
+        component: About
     },
-    '/bar': {
-        component: Bar
+    '/residential': {
+        component: Residential
+    },
+    '/multifamily': {
+    	component: Multifamily
+    },
+    '/contact-us': {
+    	component: ContactUs
     },
     '/home': {
     	component: Home

@@ -23,13 +23,13 @@
     <!-- endbuild -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.js"></script>
   </head>
-  <body>
+  <body v-cloak>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <navbar></navbar>
-    <router-view></router-view>
+    <router-view class="route" transition="route" transition-mode="out-in"></router-view>
     <vfooter></vfooter>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

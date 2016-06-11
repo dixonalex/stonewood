@@ -1,5 +1,4 @@
 const Vue = require('vue');
-const App = require('./app.vue');
 const Navbar = require('./navbar.vue');
 const Carousel = require('./carousel.vue');
 const Vendors = require('./vendors.vue');
@@ -8,8 +7,7 @@ const Footer = require('./footer.vue');
 
 new Vue({
   el: 'body',
-  components: {
-    app: App,    
+  components: {   
     navbar: Navbar,
     carousel: Carousel,
     vendors: Vendors,
@@ -17,3 +15,8 @@ new Vue({
     vfooter: Footer
   }
 })
+
+$('.nav li a').on('click', function(){
+   $('.nav').find('.active').removeClass('active');
+   $(this).parent().addClass('active');
+});

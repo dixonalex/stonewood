@@ -17,12 +17,12 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav nav-pills">
 						<!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-						<li v-bind:class="{ 'active': activePage[0] }"><a v-on:click="updateActive(0)" href="#">About<span class="sub-title">Our Culture</span></a></li>
-						<li v-bind:class="{ 'active': activePage[1] }"><a v-on:click="updateActive(1)" href="#">Residential<span class="sub-title">Photo Gallery</span></a></li>
-						<li v-bind:class="{ 'active': activePage[2] }"><a href="#">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
-						<li v-bind:class="{ 'active': activePage[3] }"><a href="#">Design Tips<span class="sub-title">helpful resources</span></a></li>
-						<li v-bind:class="{ 'active': activePage[4] }"><a href="#">Partners<span class="sub-title">quality vendors</span></a></li>
-						<li v-bind:class="{ 'active': activePage[5] }"><a href="#">Contact <span class="sub-title">get in touch</span></a></li>
+						<li class="active"><a href="#">About<span class="sub-title">Our Culture</span></a></li>
+						<li><a href="#">Residential<span class="sub-title">Photo Gallery</span></a></li>
+						<li><a href="#">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
+						<li><a href="#">Design Tips<span class="sub-title">helpful resources</span></a></li>
+						<li><a href="#">Partners<span class="sub-title">quality vendors</span></a></li>
+						<li><a href="#">Contact <span class="sub-title">get in touch</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -33,12 +33,9 @@
 <script>
 export default {
   name: 'navbar',
-  methods: {
-  	aboutActive: () => { this.activePage[index] = ! this.activePage[index]; }
-  },
   data () {
     return {
-    	activePage: [false,false,false,false,false]
+
     };
   }
 };
@@ -133,11 +130,11 @@ export default {
 			li.active
 				a {
 					border-bottom: 2px solid;
-					color: $nav-primary-color;
+					color: red;
 					background-color: #fff;
-					&:focus, &:visited, &:hover, &:focus{
+					&:focus, &:visited, &:hover{
 						border-bottom: 2px solid;
-						color: $nav-primary-color;
+						color: red;
 						background-color: #fff;
 					}
 				}

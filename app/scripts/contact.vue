@@ -4,7 +4,7 @@
       <h2>SCHEDULE AN APPOINTMENT</h2>
     </div>
     <div class="container">
-      <a href="/contact-us"  class="btn btn-md btn-primary">CONTACT</a>
+      <a href="#" v-link="'contact-us'" class="btn btn-md btn-primary">CONTACT</a>
     </div>
   </section>
 </template>

@@ -73,7 +73,6 @@ export default {
 	    width: 225px;
 	    top: 7.5px;
 	}
-	.nav { padding: 0 125px ;}
 	.nav > li > a {
 		padding: 10px 5px;
     	text-align: center;
@@ -123,9 +122,6 @@ export default {
 						    text-transform: lowercase;
 						    cursor: pointer;
 					}
-			li:nth-child(2) {
-			    margin-right: 22.5em !important;
-			}
 			li.active
 				a {
 					border-bottom: 2px solid;
@@ -137,6 +133,11 @@ export default {
 						background-color: #fff;
 					}
 				}
+	// desktop
+	@media(min-width:$breakpoint-sm-desktop){
+		.nav { padding: 0 125px ;}
+		li:nth-child(2) { margin-right: 22.5em !important; }
+	}
 	@media(max-width:$breakpoint-sm-desktop){
 		//Remove float to center nav buttons for dropdown.
 		.nav-pills > li {

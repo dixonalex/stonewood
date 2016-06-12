@@ -10,20 +10,27 @@
 	    		<span class="carousel-title">Stonewood Sales Kitchen and Bath</span>
     			<h1>PERFORMANCE EXCELLENCE</h1>
     			<p>HIGH QUALITY CABINETRY & SERVICE SINCE 2006</p>	    		
-	    		<button class="btn btn-primary btn-lg" role="button">SEE MORE</button>
+	    		<button class="btn btn-primary btn-lg" v-link="'about'" role="button">SEE MORE</button>
 	    	</div>
 	    </div>
 
 	    <div class="item">
 	      <img src="images/carousels/landing/2-unknown.jpg" alt="">
+	      <div class="carousel-caption">
+	    		<span class="carousel-title">Stonewood Sales Kitchen and Bath</span>
+    			<h1>RESIDENTIAL PRODUCTS</h1>
+    			<p>PROFESSIONAL HOME BATH AND KITCHEN DESIGN</p>	    		
+	    		<button class="btn btn-primary btn-lg" v-link="'residential'" role="button">SEE MORE</button>
+	    	</div>
 	    </div>
 
 	    <div class="item">
 	    	<img src="images/carousels/landing/3-unknown.jpg" alt="">
-	    </div>
-
-	    <div class="item">
-	    	<img src="images/carousels/landing/4-unknown.jpg" alt="">
+	    	<div class="carousel-caption">
+	    		<span class="carousel-title">Stonewood Sales Kitchen and Bath</span>
+    			<h1>MULTIFAMILY PROJECTS</h1>
+    			<p>PROVEN CABINET AND COUNTER DELIVERY AND INSTALLATION</p>	    		
+	    		<button class="btn btn-primary btn-lg" v-link="'multifamily'" role="button">SEE MORE</button>
 	    </div>
 	  </div>
 
@@ -42,8 +49,7 @@
 <script>
 export default {
 
-  name: 'carousel',
-
+  name: 'homecarousel',
   data () {
     return {
 

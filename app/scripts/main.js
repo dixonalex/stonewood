@@ -7,6 +7,7 @@ const Vendors = require('./vendors.vue');
 const Contact = require('./contact.vue');
 const Footer = require('./footer.vue');
 const ContactPage = require('./contact-us.vue')
+const About = require('./about.vue')
 
 Vue.use(VueRouter);
 
@@ -26,7 +27,10 @@ const Home = Vue.extend({
 
 const About = Vue.extend({
     template: `
-	<p>This is about!</p>`
+	<div><About></About></div>`,
+    components:{
+        about: About,
+    }
 })
 
 const Residential = Vue.extend({
@@ -94,9 +98,21 @@ router.map({
 router.start(App, 'body');
 
 // Handles nav active class
-$('.nav li a').on('click', function(){
+$('*[href$=about]').on('click', function(){
    $('.nav').find('.active').removeClass('active');
-   $(this).parent().addClass('active');
+   $('li a[href$=about]').parent().addClass('active');
+});
+$('*[href$=residential]').on('click', function(){
+   $('.nav').find('.active').removeClass('active');
+   $('li a[href$=residential]').parent().addClass('active');
+});
+$('*[href$=multifamily]').on('click', function(){
+   $('.nav').find('.active').removeClass('active');
+   $('li a[href$=multifamily]').parent().addClass('active');
+});
+$('*[href$=contact-us]').on('click', function(){
+   $('.nav').find('.active').removeClass('active');
+   $('li a[href$=contact-us]').parent().addClass('active');
 });
 // Remove active class if click on logo for landing page
 $('.site-logo').on('click', function(){

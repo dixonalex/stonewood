@@ -6,16 +6,19 @@
         <li>
           <a href="http://www.mwccabinetry.com/" target='_blank'>
             <img id="mwc" class="vendor-logo">
+            <span>Master Wood Craft</span>
           </a>
         </li>
         <li>
-          <a href="http://www.legacycabinetsllc.com/index.htm/" target='_blank'>
+          <a href="http://www.legacycabinetsllc.com/" target='_blank'>
             <img id="legacy" class="vendor-logo">
+            <span>Legacy Cabinets</span>
           </a>
         </li>
         <li>
           <a href="http://www.woodharbor.com/" target='_blank'>
             <img id="wh" class="vendor-logo">
+            <span>Wood Harbor</span>
           </a>
         </li>
       </ul>
@@ -64,25 +67,19 @@ $breakpoint-phone: 480px;
       -webkit-backface-visibility: hidden;
       display: block;
       position: relative;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
     #mwc {
       content:url("/images/vendors/mwc_b.png");
-      &:hover{
-        content:url("/images/vendors/mwc_c.png");
-      }
     }
     #legacy {
       content:url("/images/vendors/legacy_b.png");
-      &:hover{
-        content:url("/images/vendors/legacy_c.png");
-      }
     }
     #wh {
       content:url("/images/vendors/wh_b.png");
-      &:hover{
-        background-color:lightgray;
-        content:url("/images/vendors/wh_c.png");
-      }
     }
   }
   @media(max-width:$breakpoint-phone){

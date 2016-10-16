@@ -4,17 +4,17 @@
   
     <div class="container">
 
-      <form name="htmlform" method="post" action="toyousender.php">
+      <form name="htmlform" method="post" action="sendmail.php">
 
-      <input type="text" name="first_name" placeholder="NAME" required>
+        <input type="text" name="name" placeholder="NAME" required>
 
-      <input  type="email" name="email" placeholder="MAIL" required>
+        <input  type="email" name="email" placeholder="MAIL" required>
 
-      <textarea name="comments" placeholder="MESSAGE" required ></textarea>
+        <textarea name="message" placeholder="MESSAGE" required ></textarea>
 
-      <button name="send" type="submit" class="submit">SEND</button>
+        <button name="send" type="submit" class="submit">SEND</button>
 
-    </form>
+      </form>
 
     </div>
   </section>

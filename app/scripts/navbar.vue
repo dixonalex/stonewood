@@ -17,10 +17,10 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav nav-pills">
 						<!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-						<li><a v-link="{ path: '/about' }">About<span class="sub-title">Our Team</span></a></li>
-						<li><a v-link="{ path: '/residential' }">Residential<span class="sub-title">Photo Gallery</span></a></li>
-						<li><a v-link="{ path: '/multifamily' }">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
-						<li><a v-link="{ path: '/contact-us' }">Contact <span class="sub-title">get in touch</span></a></li>
+						<li  v-link-active><a v-link="{ path: '/about' }">About<span class="sub-title">Our Team</span></a></li>
+						<li  v-link-active><a v-link="{ path: '/residential' }">Residential<span class="sub-title">Photo Gallery</span></a></li>
+						<li  v-link-active><a v-link="{ path: '/multifamily' }">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
+						<li  v-link-active><a v-link="{ path: '/contact-us' }">Contact <span class="sub-title">get in touch</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -122,7 +122,7 @@ export default {
 						    text-transform: lowercase;
 						    cursor: pointer;
 					}
-			li.active
+			li.v-link-active
 				a {
 					border-bottom: 2px solid;
 					color: red;

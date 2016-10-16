@@ -1,24 +1,31 @@
 // carousel.vue
 <template>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div id="residential-carousel" class="carousel slide" data-ride="carousel">
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item active">
-	    	<img src="images/carousels/landing/1-unknown.jpg" alt="">
+	    	<img src="images/residential/photo3.jpg" alt="">
 	    	<div class="carousel-caption">
-	    		<span class="carousel-title">Stonewood Sales Kitchen and Bath</span>
-    			<h1>RESIDENTIAL</h1>   		
-	    		<button class="btn btn-primary btn-lg" v-link="'contact-us'" role="button">CONTACT</button>
+	    		<h1>RESIDENTIAL</h1>  
+	    		<h3>View some recent jobs</h3>
 	    	</div>
 	    </div>
 
+	    <div class="item">
+	    	<img src="images/residential/photo4.jpg" alt="">
+	    </div>
+
+	    <div class="item">
+	    	<img src="images/residential/photo5.jpg" alt="">
+	    </div>
+
 	  <!-- Left and right controls -->
-	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	  <a class="left carousel-control" href="#residential-carousel" role="button" data-slide="prev">
 	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 	    <span class="sr-only">Previous</span>
 	  </a>
-	  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	  <a class="right carousel-control" href="#residential-carousel" role="button" data-slide="next">
 	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 	    <span class="sr-only">Next</span>
 	  </a>

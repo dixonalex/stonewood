@@ -25,7 +25,7 @@ const Home = Vue.extend({
 	}
 })
 
-const About = Vue.extend({
+const AboutPage = Vue.extend({
     template: `
 	<div><About></About></div>`,
     components:{
@@ -97,24 +97,5 @@ router.map({
 
 router.start(App, 'body');
 
-// Handles nav active class
-$('*[href$=about]').on('click', function(){
-   $('.nav').find('.active').removeClass('active');
-   $('li a[href$=about]').parent().addClass('active');
-});
-$('*[href$=residential]').on('click', function(){
-   $('.nav').find('.active').removeClass('active');
-   $('li a[href$=residential]').parent().addClass('active');
-});
-$('*[href$=multifamily]').on('click', function(){
-   $('.nav').find('.active').removeClass('active');
-   $('li a[href$=multifamily]').parent().addClass('active');
-});
-$('*[href$=contact-us]').on('click', function(){
-   $('.nav').find('.active').removeClass('active');
-   $('li a[href$=contact-us]').parent().addClass('active');
-});
-// Remove active class if click on logo for landing page
-$('.site-logo').on('click', function(){
-   $('.nav').find('.active').removeClass('active');
-});
+//Bootstrap Carousel swipe functionality
+$('.carousel-inner').bcSwipe({ threshold: 50 });

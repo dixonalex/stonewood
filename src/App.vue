@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <navbar></navbar>
+    <router-view></router-view>
+    <img src="static/images/logo-nav.png">
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
+import Navbar from './components/Navbar'
 export default {
   name: 'app',
   components: {
-    Hello
+    Navbar
   }
 }
 </script>

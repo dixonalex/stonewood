@@ -5,6 +5,10 @@ import App from './App'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 
+// Vendor libraries
+require('bootstrap-loader')
+
+// Vue components
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Multifamily from './components/Multifamily/Multifamily'

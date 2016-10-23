@@ -19,20 +19,25 @@ Vue.use(VueRouter)
 Vue.use(Vuex)
 
 const routes = [
-  { path: '/', redirect: '/landing' },
   { path: '/about', component: About },
   { path: '/residential', component: Residential },
   { path: '/multifamily', component: Multifamily },
   { path: '/contact-us', component: Contact },
-  { path: '/home', component: Landing }
+  { path: '/', component: Landing }
 ]
 
 const router = new VueRouter({
   routes // short for routes: routes
 })
 
-new Vue({
-  el: '#app',
+const app = new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
+
+app
+// new Vue({
+//   el: '#app',
+//   render: h => h(App),
+//   router
+// }).$mount('#app')

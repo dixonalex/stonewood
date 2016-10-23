@@ -17,10 +17,18 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav nav-pills">
             <!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-            <li  router-link-active><a router-link to="{ path: '/about' }">About<span class="sub-title">Our Team</span></a></li>
-            <li  router-link-active><a router-link to="{ path: '/residential' }">Residential<span class="sub-title">Photo Gallery</span></a></li>
-            <li  router-link-active><a router-link to="{ path: '/multifamily' }">Multifamily<span class="sub-title">Photo Gallery</span></a></li>
-            <li  router-link-active><a router-link to="{ path: '/contact-us' }">Contact <span class="sub-title">get in touch</span></a></li>
+            <li  router-link-active>
+              <router-link to="/about">About<span class="sub-title">Our Team</span></router-link>
+            </li>
+            <li  router-link-active>
+              <router-link to="/residential">Residential<span class="sub-title">Photo Gallery</span></router-link>
+            </li>
+            <li  router-link-active>
+              <router-link to="/multifamily">Multifamily<span class="sub-title">Photo Gallery</span></router-link>
+            </li>
+            <li  router-link-active>
+              <router-link to="/contact-us">Contact <span class="sub-title">get in touch</span></router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -92,6 +100,7 @@ export default {
     ul
       li {
         padding: 0 5px;
+        cursor: pointer;
       }
         a {
           padding: 10px 5px;

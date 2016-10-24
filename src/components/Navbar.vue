@@ -11,22 +11,22 @@
                 <span class="icon-bar"></span>
           </button>
           <div class="site-logo">
-            <a href="#"><img class="logo-nav"></a>
+            <router-link to="/"><img class="logo-nav"></router-link>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav nav-pills">
             <!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-            <li  router-link-active>
+            <li router-link-active>
               <router-link to="/about">About<span class="sub-title">Our Team</span></router-link>
             </li>
-            <li  router-link-active>
+            <li router-link-active>
               <router-link to="/residential">Residential<span class="sub-title">Photo Gallery</span></router-link>
             </li>
-            <li  router-link-active>
+            <li router-link-active>
               <router-link to="/multifamily">Multifamily<span class="sub-title">Photo Gallery</span></router-link>
             </li>
-            <li  router-link-active>
+            <li router-link-active>
               <router-link to="/contact-us">Contact <span class="sub-title">get in touch</span></router-link>
             </li>
           </ul>

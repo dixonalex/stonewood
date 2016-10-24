@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="vendors_heading">
-      <h2>VENDORS</h2>
+      <h2>BUSINESS PARTNERS</h2>
       <ul class="vendors">
         <li>
           <a href="http://www.mwccabinetry.com/" target='_blank'>

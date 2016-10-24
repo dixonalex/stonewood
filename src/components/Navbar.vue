@@ -17,18 +17,18 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav nav-pills">
             <!-- <nav-li nav-title="Residential" nav-sub-title="Photo Gallery"></nav-li> -->
-            <li router-link-active>
-              <router-link to="/about">About<span class="sub-title">Our Team</span></router-link>
-            </li>
-            <li router-link-active>
-              <router-link to="/residential">Residential<span class="sub-title">Photo Gallery</span></router-link>
-            </li>
-            <li router-link-active>
-              <router-link to="/multifamily">Multifamily<span class="sub-title">Photo Gallery</span></router-link>
-            </li>
-            <li router-link-active>
-              <router-link to="/contact-us">Contact <span class="sub-title">get in touch</span></router-link>
-            </li>
+            <router-link tag="li" to="/about">
+              <a>About<span class="sub-title">Our Team</span></a>
+            </router-link>
+            <router-link tag="li" to="/residential">
+              <a>Residential<span class="sub-title">Photo Gallery</span></a>
+            </router-link>
+            <router-link tag="li" to="/multifamily">
+              <a>Multifamily<span class="sub-title">Photo Gallery</span></a>
+            </router-link>
+            <router-link tag="li" to="/contact-us">
+              <a>Contact <span class="sub-title">get in touch</span></a>
+            </router-link>
           </ul>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default {
                 text-transform: lowercase;
                 cursor: pointer;
           }
-      li.v-link-active
+      li.router-link-active
         a {
           border-bottom: 2px solid;
           color: red;

@@ -18,7 +18,8 @@ module.exports = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
+      vue: 'vue/dist/vue.js'
     }
   },
   resolveLoader: {
@@ -44,6 +45,14 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue'
       },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.png$/, loader: "url-loader?limit=100000" },
+      { test: /\.jpg$/, loader: "file-loader" },
+      { test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: 'imports?jQuery=jquery' },
       {
         test: /\.js$/,
         loader: 'babel',

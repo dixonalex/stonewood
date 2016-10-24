@@ -1,6 +1,6 @@
-# stonewood
+# Stonewood Sales
 
-> A Vue.js project
+> A Vue.js project (www.stonewoodsales.com)
 
 ## Build Setup
 

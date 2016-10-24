@@ -1,0 +1,33 @@
+// carousel.vue
+<template>
+  <carousel>
+    <slider class="active">
+      <img src="static/images/residential/photo3.jpg">
+    </slider>
+    <slider>
+      <img src="static/images/residential/photo4.jpg" alt="">
+    </slider>
+    <slider>
+      <img src="static/images/residential/photo5.jpg" alt="">
+    </slider>
+  </carousel>
+</template>
+
+<script>
+import { carousel, slider } from 'vue-strap'
+export default {
+  components: {
+    carousel,
+    slider
+  },
+  name: 'Residential',
+  data () {
+    return {
+
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+</style>

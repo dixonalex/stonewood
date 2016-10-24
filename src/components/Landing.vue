@@ -55,18 +55,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
- .carousel-image { min-height: 300px; }
- .carousel-inner>.item>img {
-     width: 100%; 
-}
-.carousel-caption {
-    position: absolute;
-    top: 200px;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    height: 100%;
-}
 </style>

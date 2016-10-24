@@ -8,7 +8,7 @@
     >
       <router-view v-show="!loading"></router-view>
     </transition>
-    <stonewood-footer v-show="!loading"></stonewood-footer>
+    <stonewood-footer v-cloak v-show="!loading"></stonewood-footer>
   </div>
 </template>
 

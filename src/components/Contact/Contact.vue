@@ -1,20 +1,38 @@
 <template>
-<div class="container col-md-offset-3">
-  <form>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+<div class="col-md-offset-3 col-md-6" style="float: none">
+  <form class="form-horizontal" role="form" method="post" action="/_gdForm/webformmailer.asp">
+  <input type="hidden" name="subject" value="Submission" />
+  <input type="hidden" name="redirect" value="" />
+    <div class="form-group">
+      <label for="FirstName" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First & Last Name" value="">
+      </div>
     </div>
-
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+      </div>
     </div>
-
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="form-group">
+      <label for="comments" class="col-sm-2 control-label">Message</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="4" id="comments" type="comments" name="comments"></textarea>
+      </div>
     </div>
-    
-    <div class="input-group">
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+      </div>
+    </div>
+    <input type="hidden" name="form_order" value="alpha"/>
+    <input type="hidden" name="form_interval" value="default"/>
+    <input type="hidden" name="form_format" value="html"/>
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <!-- <! Will be used to display an alert to the user> -->
+      </div>
     </div>
   </form>
 </div>
@@ -34,9 +52,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-form {
-  /*width: 50%;*/
-}
 input {
   margin-top: 10px;
 }

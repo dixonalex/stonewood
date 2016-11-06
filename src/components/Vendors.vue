@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="vendors_heading">
-      <h2>VENDORS</h2>
+      <h2>BUSINESS PARTNERS</h2>
       <ul class="vendors">
         <li>
           <a href="http://www.mwccabinetry.com/" target='_blank'>
@@ -19,6 +19,18 @@
           <a href="http://www.woodharbor.com/" target='_blank'>
             <img id="wh" class="vendor-logo">
             <span>Wood Harbor</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.fieldstonecabinetry.com/Pages/home.aspx" target='_blank'>
+            <img id="field-stone" class="vendor-logo">
+            <span>Field Stone</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.istone.biz/Pages/isthomepg.html" target='_blank'>
+            <img id="istone" class="vendor-logo">
+            <span>iStone</span>
           </a>
         </li>
       </ul>
@@ -70,16 +82,23 @@ $breakpoint-phone: 480px;
       img {
         display: block;
         margin: 0 auto;
+        width: 100px;
       }
     }
     #mwc {
-      content:url("/static/images/vendors/mwc_b.png");
+      content:url("/static/images/vendors/mwc_c.png");
     }
     #legacy {
-      content:url("/static/images/vendors/legacy_b.png");
+      content:url("/static/images/vendors/legacy_c.png");
     }
     #wh {
       content:url("/static/images/vendors/wh_b.png");
+    }
+    #field-stone {
+      content:url("/static/images/vendors/fieldstone-logo.jpg");
+    }
+    #istone {
+      content:url("/static/images/vendors/istone-logo.gif");
     }
   }
   @media(max-width:$breakpoint-phone){

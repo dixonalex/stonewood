@@ -1,10 +1,10 @@
 // carousel.vue
 <template>
   <carousel>
-    <slider class="active">
+    <!-- <slider class="active">
       <img src="static/images/residential/photo3.jpg">
-    </slider>
-    <slider>
+    </slider> -->
+    <slider class="active">
       <img src="static/images/residential/photo4.jpg" alt="">
     </slider>
     <slider>

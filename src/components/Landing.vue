@@ -41,17 +41,17 @@ export default {
     return {
       showHeader: false,
       imgObjs: [{
-        image: 'static/images/carousels/landing/1-unknown.jpg',
+        image: 'static/img/carousels/landing/1-unknown.jpg',
         title: 'PERFORMANCE EXCELLENCE',
         description: 'HIGH QUALITY CABINETRY & SERVICE SINCE 2006'
       },
       {
-        image: 'static/images/carousels/landing/2-unknown.jpg',
+        image: 'static/img/carousels/landing/2-unknown.jpg',
         title: 'RESIDENTIAL PRODUCTS',
         description: 'PROFESSIONAL HOME BATH AND KITCHEN DESIGN'
       },
       {
-        image: 'static/images/multi/grand oaks at new smyrna tn.jpg',
+        image: 'static/img/multi/grand oaks at new smyrna tn.jpg',
         title: 'MULTIFAMILY PROJECTS',
         description: 'PROVEN CABINET AND COUNTER DELIVERY AND INSTALLATION'
       }]

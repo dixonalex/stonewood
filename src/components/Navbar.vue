@@ -54,11 +54,11 @@ export default {
   $breakpoint-tablet: 768px;
   $breakpoint-phone: 480px;
   $breakpoint-iphone6: 400px;
-  $logo-fullsize: "/static/images/logo-nav.png";
-  $logo-phone: "/static/images/logo-nav-iphone.png";
+  $logo-fullsize: "/static/img/logo-nav.png";
+  $logo-phone: "/static/img/logo-nav-iphone.png";
 
   .logo-nav {
-    content:url("/static/images/logo-nav.png");
+    content:url("/static/img/logo-nav.png");
   }
   .header {
     margin-bottom: 0;
@@ -159,7 +159,7 @@ export default {
   }
   @media(max-width:$breakpoint-iphone6){
     .logo-nav {
-      content:url("/static/images/logo-nav-iphone.png");
+      content:url("/static/img/logo-nav-iphone.png");
     }
     .site-logo{
       margin-left: -140px;

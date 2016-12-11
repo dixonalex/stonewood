@@ -2,13 +2,13 @@
 <template>
   <carousel>
     <!-- <slider class="active">
-      <img src="static/images/residential/photo3.jpg">
+      <img src="static/img/residential/photo3.jpg">
     </slider> -->
     <slider class="active">
-      <img src="static/images/residential/photo4.jpg" alt="">
+      <img src="static/img/residential/photo4.jpg" alt="">
     </slider>
     <slider>
-      <img src="static/images/residential/photo5.jpg" alt="">
+      <img src="static/img/residential/photo5.jpg" alt="">
     </slider>
   </carousel>
 </template>

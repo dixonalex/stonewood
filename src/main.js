@@ -1,3 +1,5 @@
+// You should instead import the polyfill at the top of the entry point to ensure the polyfills are loaded first
+import 'babel-polyfill'
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'

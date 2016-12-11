@@ -6,7 +6,7 @@
         <p>Kitchens, Bathrooms, Cabinets, Countertops</p>
     </header>
   </transition>
-  <Gallery style="margin-top: 2.5%;" :img-objs="imgObjs"></Gallery>
+  <Galleria :img-data="imgObjs"></Galleria>
   <br>
   <Vendors></Vendors>
   <schedule-appt></schedule-appt>
@@ -17,7 +17,7 @@
 import { carousel, slider } from 'vue-strap'
 import Vendors from './Vendors'
 import ScheduleAppt from './Contact/ScheduleAppt'
-import Gallery from './Utils/Gallery'
+import Galleria from './Utils/Galleria'
 export default {
 
   name: 'Landing',
@@ -27,36 +27,33 @@ export default {
     slider,
     Vendors,
     ScheduleAppt,
-    Gallery
+    Galleria
   },
 
   mounted: function () {
-    this.$nextTick(function () {
-      // code that assumes this.$el is in-document
-      setTimeout(function () { this.showHeader = false }.bind(this), 2000)
-    })
+    // this.$nextTick(function () {
+    //   // code that assumes this.$el is in-document
+    //   setTimeout(function () { this.showHeader = false }.bind(this), 2000)
+    // })
   },
 
   data () {
     return {
-      showHeader: true,
+      showHeader: false,
       imgObjs: [{
-        Src: 'static/images/carousels/landing/1-unknown.jpg',
-        Title: 'PERFORMANCE EXCELLENCE',
-        Description: 'HIGH QUALITY CABINETRY & SERVICE SINCE 2006',
-        Display: true
+        image: 'static/img/carousels/landing/1-unknown.jpg',
+        title: 'PERFORMANCE EXCELLENCE',
+        description: 'HIGH QUALITY CABINETRY & SERVICE SINCE 2006'
       },
       {
-        Src: 'static/images/carousels/landing/2-unknown.jpg',
-        Title: 'RESIDENTIAL PRODUCTS',
-        Description: 'PROFESSIONAL HOME BATH AND KITCHEN DESIGN',
-        Display: false
+        image: 'static/img/carousels/landing/2-unknown.jpg',
+        title: 'RESIDENTIAL PRODUCTS',
+        description: 'PROFESSIONAL HOME BATH AND KITCHEN DESIGN'
       },
       {
-        Src: 'static/images/multi/grand oaks at new smyrna tn.jpg',
-        Title: 'MULTIFAMILY PROJECTS',
-        Description: 'PROVEN CABINET AND COUNTER DELIVERY AND INSTALLATION',
-        Display: false
+        image: 'static/img/multi/grand oaks at new smyrna tn.jpg',
+        title: 'MULTIFAMILY PROJECTS',
+        description: 'PROVEN CABINET AND COUNTER DELIVERY AND INSTALLATION'
       }]
     }
   }

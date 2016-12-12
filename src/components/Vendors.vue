@@ -57,7 +57,6 @@ $breakpoint-phone: 480px;
   div.vendors_heading {
     color: #0a0a0a;
     text-align: center;
-    font-family: PT Sans;
     font-weight: 400;
     font-style: normal;
   }

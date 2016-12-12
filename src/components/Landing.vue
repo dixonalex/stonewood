@@ -96,7 +96,7 @@ $breakpoint-iphone6: 400px;
     div
       font-size: 1.75rem;
       font-weight: 400;
-      padding-top: 10%;
+      padding-top: 5%;
 
 header
   background-color: red

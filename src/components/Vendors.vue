@@ -57,7 +57,6 @@ $breakpoint-phone: 480px;
   div.vendors_heading {
     color: #0a0a0a;
     text-align: center;
-    font-family: PT Sans;
     font-weight: 400;
     font-style: normal;
   }
@@ -86,19 +85,19 @@ $breakpoint-phone: 480px;
       }
     }
     #mwc {
-      content:url("/static/images/vendors/mwc_c.png");
+      content:url("/static/img/vendors/mwc_c.png");
     }
     #legacy {
-      content:url("/static/images/vendors/legacy_c.png");
+      content:url("/static/img/vendors/legacy_c.png");
     }
     #wh {
-      content:url("/static/images/vendors/wh_b.png");
+      content:url("/static/img/vendors/wh_b.png");
     }
     #field-stone {
-      content:url("/static/images/vendors/fieldstone-logo.jpg");
+      content:url("/static/img/vendors/fieldstone-logo.jpg");
     }
     #istone {
-      content:url("/static/images/vendors/istone-logo.gif");
+      content:url("/static/img/vendors/istone-logo.gif");
     }
   }
   @media(max-width:$breakpoint-phone){
@@ -109,10 +108,10 @@ $breakpoint-phone: 480px;
         margin: 20px 0;
       }
       #mwc {
-        content:url("/static/images/vendors/mwc_c.png");
+        content:url("/static/img/vendors/mwc_c.png");
       }
       #legacy {
-        content:url("/static/images/vendors/legacy_c.png");
+        content:url("/static/img/vendors/legacy_c.png");
       }
     }
   }

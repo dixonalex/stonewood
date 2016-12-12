@@ -1,12 +1,16 @@
 <template>
 <div>
-  <transition name="slide-fade-up">
-    <header v-if="showHeader">
-        <h1>StoneWood Sales</h1>
-        <p>Kitchens, Bathrooms, Cabinets, Countertops</p>
-    </header>
-  </transition>
-  <Galleria :img-data="imgObjs"></Galleria>
+  <!-- <Galleria :img-data="imgObjs"></Galleria> -->
+  <div class="landing-splash">
+    <div class="mid">
+      <img src="static/img/sws-logo-small.png">
+      <h1>We Know Cabinets</h1>
+      <div>
+        <p>Commercial, new homes, renovations, and specialty projects.</p>
+        <p>Servicing the South East US for 20+ years.</p>
+      </div>
+    </div>
+  </div>
   <br>
   <Vendors></Vendors>
   <schedule-appt></schedule-appt>
@@ -61,7 +65,39 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+$breakpoint-sm-desktop: 1068px;
+$breakpoint-tablet: 700px;
+$breakpoint-phone: 480px;
+$breakpoint-iphone6: 400px;
+
 // HEADER
+.landing-splash
+  width: 100%;
+  // height: 500px;
+  @media(max-width: $breakpoint-tablet)
+    height: 250px;
+    h1
+      font-size: 1em
+    p
+      font-size: 0.5em
+  @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
+    height: 400px;
+  @media screen and (min-width: $breakpoint-sm-desktop)
+    height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/static/img/landing-splash-greenkitchen.jpg')
+  background-size: cover;
+  background-repeat: no-repeat;
+  .mid
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    padding-top: 7.5%;
+    left: 50%;
+    div
+      font-size: 1.75rem;
+      font-weight: 400;
+      padding-top: 5%;
+
 header
   background-color: red
   color: #fff
@@ -76,7 +112,6 @@ header
     letter-spacing: 3px
     line-height: .8
     padding-top: 50px
-    font-family: 'Montserrat', sans-serif
 
 .slide-fade-up-enter-active
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)

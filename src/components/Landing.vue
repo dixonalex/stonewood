@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+$break-small: 420px;
+$break-med: 800px;
+
 // HEADER
 .landing-splash
   width: 100%
@@ -76,13 +79,19 @@ export default {
     color: white;
     margin: 0;
     position: absolute;
-    top: 50%;
+    @media (max-width: $break-small)
+      top: 30%;
+    @media (max-width: $break-med)
+      top: 40%;
+    @media (min-width: $break-med)
+      top: 50%;
     left: 50%;
     div
       font-size: 1.75rem;
       font-weight: 400;
       padding-top: 10%;
     transform: translate(-50%, -50%);
+
 header
   background-color: red
   color: #fff

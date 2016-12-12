@@ -66,7 +66,7 @@ export default {
 
 <style lang="sass" scoped>
 $breakpoint-sm-desktop: 1068px;
-$breakpoint-tablet: 768px;
+$breakpoint-tablet: 700px;
 $breakpoint-phone: 480px;
 $breakpoint-iphone6: 400px;
 
@@ -80,9 +80,9 @@ $breakpoint-iphone6: 400px;
       font-size: 1em
     p
       font-size: 0.5em
-  @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
+  @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
     height: 400px;
-  @media(min-width: $breakpoint-sm-desktop)
+  @media screen and (min-width: $breakpoint-sm-desktop)
     height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/static/img/landing-splash-greenkitchen.jpg')
   background-size: cover;
@@ -92,11 +92,11 @@ $breakpoint-iphone6: 400px;
     color: white;
     margin: 0;
     position: absolute;
-    @media(max-width: $breakpoint-tablet)
+    @media screen and (min-width: 1px) and (max-width: $breakpoint-tablet)
       top: 30%;
-    @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
       top: 60%;
-    @media(min-width: $breakpoint-sm-desktop)
+    @media screen and (min-width: $breakpoint-sm-desktop)
       top: 50%;
     left: 50%;
     div

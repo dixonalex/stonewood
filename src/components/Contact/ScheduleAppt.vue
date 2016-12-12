@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
   #landing-schedule.statement{
     background-position: 50% 100px;
-    background-image: url("/static/images/vendors/contact_bg.png");
+    background-image: url("/static/img/vendors/contact_bg.png");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;

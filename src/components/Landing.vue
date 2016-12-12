@@ -91,19 +91,12 @@ $breakpoint-iphone6: 400px;
     font-weight: 900;
     color: white;
     margin: 0;
-    position: absolute;
-    @media screen and (min-width: 1px) and (max-width: $breakpoint-tablet)
-      top: 30%;
-    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
-      top: 60%;
-    @media screen and (min-width: $breakpoint-sm-desktop)
-      top: 50%;
+    padding-top: 7.5%;
     left: 50%;
     div
       font-size: 1.75rem;
       font-weight: 400;
       padding-top: 10%;
-    transform: translate(-50%, -50%);
 
 header
   background-color: red

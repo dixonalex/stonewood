@@ -156,9 +156,6 @@ export default {
     li:nth-child(3) {
         margin-right: 0 !important;
     }
-    .logo-nav {
-      display: none;
-    }
   }
   @media(max-width:$breakpoint-iphone6){
     .logo-nav {

@@ -112,7 +112,6 @@ header
     letter-spacing: 3px
     line-height: .8
     padding-top: 50px
-    font-family: 'Montserrat', sans-serif
 
 .slide-fade-up-enter-active
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)

@@ -1,5 +1,7 @@
-node_modules
-dist
-.tmp
-bower_components
-test/bower_components
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log

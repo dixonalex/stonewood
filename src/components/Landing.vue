@@ -65,25 +65,38 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-$break-small: 420px;
-$break-med: 800px;
+$breakpoint-sm-desktop: 1068px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
+$breakpoint-iphone6: 400px;
 
 // HEADER
 .landing-splash
-  width: 100%
-  height: 500px
+  width: 100%;
+  // height: 500px;
+  @media(max-width: $breakpoint-tablet)
+    height: 250px;
+    h1
+      font-size: 1em
+    p
+      font-size: 0.5em
+  @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
+    height: 400px;
+  @media(min-width: $breakpoint-sm-desktop)
+    height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/static/img/landing-splash-greenkitchen.jpg')
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   .mid
     font-weight: 900;
     color: white;
     margin: 0;
     position: absolute;
-    @media (max-width: $break-small)
+    @media(max-width: $breakpoint-tablet)
       top: 30%;
-    @media (max-width: $break-med)
-      top: 40%;
-    @media (min-width: $break-med)
+    @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-sm-desktop)
+      top: 60%;
+    @media(min-width: $breakpoint-sm-desktop)
       top: 50%;
     left: 50%;
     div

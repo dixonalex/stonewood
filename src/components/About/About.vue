@@ -14,7 +14,7 @@
     <div class="container">
       <h1>Meet Our Team</h1>
       <p class="col-md-8 col-md-offset-2">One of our core values is to provide the most advanced, high quality cabinet we can possibly offer. You can expect the same kind of precision from our customer service and sales staff. We'd love to help you with your project!</p>
-      <div class="contacts">
+      <div class="contacts col-md-10 col-md-offset-1">
         <div v-for="contact in contacts" class="circleParent">
           <blurb-card :img-src="contact.imgPath" :title="contact.title" :name="contact.name"></blurb-card>
         </div>
@@ -38,6 +38,13 @@ export default {
     return {
       contacts: [
         {
+          name: 'Dan Whalen',
+          title: 'Design & Sales',
+          email: 'mailto:@stonewoodsales.com',
+          phone: 'tel:386-237-3178',
+          imgPath: 'static/img/about/dan.jpg'
+        },
+        {
           name: 'Rhon Dixon',
           title: 'Design & Sales',
           email: 'mailto:@stonewoodsales.com',
@@ -52,11 +59,25 @@ export default {
           imgPath: 'static/img/about/susie.jpg'
         },
         {
+          name: 'Ian Wilson',
+          title: 'Renovation Specialist',
+          email: 'mailto:@stonewoodsales.com',
+          phone: 'tel:386-237-3178',
+          imgPath: 'static/img/about/ian.jpg'
+        },
+        {
           name: 'Skyler Dixon',
           title: 'Building Specialist',
           email: 'mailto:sdixon@stonewoodsales.com',
           phone: 'tel:386-679-7623',
           imgPath: 'static/img/about/sky.jpg'
+        },
+        {
+          name: 'Stan Marcio',
+          title: 'Multi-Family',
+          email: 'mailto:@stonewoodsales.com',
+          phone: 'tel:386-237-3178',
+          imgPath: 'static/img/about/stan.jpg'
         },
         {
           name: 'Oliver Wilabus',

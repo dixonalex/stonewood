@@ -73,6 +73,13 @@ export default {
           imgPath: 'static/img/about/sky.jpg'
         },
         {
+          name: 'David Randal',
+          title: 'Multi-Family',
+          email: 'mailto:sdixon@stonewoodsales.com',
+          phone: 'tel:386-679-7623',
+          imgPath: 'static/img/about/david.jpg'
+        },
+        {
           name: 'Stan Marcio',
           title: 'Multi-Family',
           email: 'mailto:@stonewoodsales.com',

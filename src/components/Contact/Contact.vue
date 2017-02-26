@@ -1,5 +1,5 @@
 <template>
-<div class="col-md-offset-3 col-md-6" style="float: none">
+<div class="col-md-offset-3 col-md-6" style="float: none; padding-top: 7.5%">
   <form class="form-horizontal" role="form" method="post" action="/_gdForm/webformmailer.asp">
   <input type="hidden" name="subject" value="Submission" />
   <input type="hidden" name="redirect" value="" />

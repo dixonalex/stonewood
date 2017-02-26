@@ -50,7 +50,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-  padding-top: 20px;
 }
 /* Transtion styles */
 .fade-enter-active, .fade-leave-active {

@@ -4,7 +4,7 @@
   <div>
     <carousel :navigationEnabled="true" :perPage="1" :autoplayEnabled="true" :paginationPadding="5" >
       <slide v-for="pic in Pics">
-        <img class="img-responsive" :src=pic.src>
+        <img class="img-responsive" alt="custom bath construction remodel residential" title="Residential Bath" :src=pic.src>
         <span class="label">
         </span>
       </slide>

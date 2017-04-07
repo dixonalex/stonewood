@@ -1,105 +1,22 @@
 <template>
   <div class="Vue-Carousel">
-    <carousel :navigationEnabled="true" :perPage="1" :autoplayEnabled="true" :paginationPadding="5">
-      <slide>
-        <img class="img-responsive" src="static/img/multi/55 west orlando.jpg">
-        <div class="label">
-          <h1>55 West</h1>
-          <h3>Orlando, FL</h3>
-        </div>
-      </slide>
-      <slide>
-        <img class="img-responsive" src="static/img/multi/gaines-street-district-east-tally.jpg">
-        <div class="label">
-          <h1>Gaines Street District East</h1>
-          <h3>Talahassee, FL</h3>
-        </div>
-      </slide>
-      <slide>
-        <img class="img-responsive" src="static/img/multi/grand oaks at new smyrna tn.jpg">
-        <div class="label">
-          <h1>Grand Oaks</h1>
-          <h3>New Smyrna, TN</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/madison heights tampa.png">
-        <div class="label">
-          <h1>Madison Heights</h1>
-          <h3>Tampa, FL</h3>
-        </div>
-      </slide>
-
-      <!-- <slide>
-        <img class="img-responsive" src="static/img/multi/NC_Kannapolis_IntegraSprings_.jpg">
-        <div class="label">
-          <h1>Integra Springs</h1>
-            <h3>Kannapolis, NC</h3>
-        </div>
-      </slide> -->
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/resrve at knollwood blacksburg va.jpg">
-        <div class="label">
-          <h1>Reserve at Knollwood</h1>
-          <h3>Blacksburg, VA</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/silos charlotte.jpg">
-        <div class="label">
-          <h1>Silos</h1>
-          <h3>Charlotte, NC</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/springs at greenville.jpg">
-        <div class="label">
-          <h1>Springs at Greenville</h1>
-          <h3>Greenville, NC</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/springs at tech ridge austin.jpg">
-        <div class="label">
-          <h1>Springs at Tech Ridge</h1>
-          <h3>Austin, TX</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/weatgate villas kissimmee.jpg">
-        <div class="label">
-          <h1>Westgate Villas</h1>
-            <h3>Kissimmee, FL</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/wiregrass san antonio.jpg">
-        <div class="label">
-          <h1>Wiregrass</h1>
-          <h3>San Antonio, TX</h3>
-        </div>
-      </slide>
-
-      <slide>
-        <img class="img-responsive" src="static/img/multi/111 south statesboro ga.jpg">
-        <div class="label">
-          <h1>111 South</h1>
-          <h3>Statesboro, GA</h3>>
-        </div>
+  <!-- <h1>Residential Kitchens</h1> -->
+  <div>
+    <carousel :navigationEnabled="true" :perPage="1" :autoplayEnabled="true" :paginationPadding="5" >
+      <slide v-for="pic in Pics">
+        <img class="img-responsive" alt="custom multifamily new construction remodel" title="Multifamily" :src=pic.src>
+        <span class="label">
+          <h2><span>{{ pic.address }}:<span class='spacer'></span></br><span class='spacer'></span>{{ pic.state }}</span></h2>
+        </span>
       </slide>
     </carousel>
   </div>
+</div>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
+const imgSrc = 'static/img/multi/'
 export default {
   components: {
     Carousel,
@@ -109,7 +26,63 @@ export default {
 
   data () {
     return {
-
+      Pics: [
+        {
+          src: imgSrc + '55 west orlando.jpg',
+          address: '55 West',
+          state: 'Orlando, FL'
+        },
+        {
+          src: imgSrc + 'gaines-street-district-east-tally.jpg',
+          address: 'Gaines Street District East',
+          state: 'Tallahassee, FL'
+        },
+        {
+          src: imgSrc + 'grand oaks at new smyrna tn.jpg',
+          address: 'Grand Oaks',
+          state: 'New Smyrna, TN'
+        },
+        {
+          src: imgSrc + 'madison heights tampa.png',
+          address: 'Madison Heights',
+          state: 'Tampa, FL'
+        },
+        {
+          src: imgSrc + 'resrve at knollwood blacksburg va.jpg',
+          address: 'Reserve at Knollwood',
+          state: 'Blackburg, VA'
+        },
+        {
+          src: imgSrc + 'silos charlotte.jpg',
+          address: 'Silos',
+          state: 'Charlotte, NC'
+        },
+        {
+          src: imgSrc + 'springs at greenville.jpg',
+          address: 'Springs at Greenville',
+          state: 'Greenville, NC'
+        },
+        {
+          src: imgSrc + 'springs at tech ridge austin.jpg',
+          address: 'Springs at Tech Ridge',
+          state: 'Austin, TX'
+        },
+        {
+          src: imgSrc + 'weatgate villas kissimmee.jpg',
+          address: 'Westgate Villas. ',
+          state: 'Kissimmee, FL'
+        },
+        {
+          src: imgSrc + 'wiregrass san antonio.jpg',
+          address: 'Wiregrass',
+          state: 'San Antonio, TX'
+        },
+        {
+          src: imgSrc + '111 south statesboro ga.jpg',
+          address: '111 South Statesboro',
+          state: 'Statesboro, TX'
+        }
+      ]
     }
   }
 }
@@ -142,5 +115,18 @@ export default {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+h2 span { 
+   color: white; 
+   font: bold 3.5vw Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+h2 span.spacer {
+   padding:0 5px;
 }
 </style>

@@ -4,7 +4,7 @@
   <div>
     <carousel :navigationEnabled="true" :perPage="1" :autoplayEnabled="true" :paginationPadding="5" >
       <slide v-for="pic in Pics">
-        <img class="img-responsive" alt="custom multifamily new construction remodel" :src=pic.src>
+        <img class="img-responsive" alt="custom multifamily new construction remodel" title="Multifamily" :src=pic.src>
         <span class="label">
           <h2><span>{{ pic.address }}:<span class='spacer'></span></br><span class='spacer'></span>{{ pic.state }}</span></h2>
         </span>

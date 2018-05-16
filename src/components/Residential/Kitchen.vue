@@ -2,29 +2,29 @@
 <div class="Vue-Carousel">
   <!-- <h1>Residential Kitchens</h1> -->
   <div>
-    <carousel :navigationEnabled="true" :perPage="1" :autoplayEnabled="true" :paginationPadding="5" >
-      <slide v-for="pic in Pics">
-        <img class="img-responsive" alt="custom kitchen construction remodel residential" title="Residential Kitchen" :src=pic.src>
-        <span class="label">
-        </span>
+    <carousel-3d :width="windowWidth * .7" :height="windowHeight * .7" :controls-visible="true">
+      <slide v-for="(pic, i) in Pics" :index="i">
+        <img alt="custom kitchen construction remodel residential" title="Residential Kitchen" :src=pic.src>
       </slide>
-    </carousel>
+    </carousel-3d>
   </div>
 </div>
-  
+
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
+import { Carousel3d, Slide } from 'vue-carousel-3d'
 const kitchenSrc = 'static/img/residential/kitchen/'
 export default {
   components: {
-    Carousel,
+    Carousel3d,
     Slide
   },
   name: 'Kitchen',
   data () {
     return {
+      windowWidth: 0,
+      windowHeight: 0,
       Pics: [
         { src: kitchenSrc + 'woodharbor_dorgan-069521.jpg' },
         { src: kitchenSrc + 'woodharbor_manchester-087110.jpg' },
@@ -36,6 +36,30 @@ export default {
         { src: kitchenSrc + 'demro-kitchen.jpg' }
       ]
     }
+  },
+  mounted () {
+    this.$nextTick(function () {
+      window.addEventListener('resize', this.getWindowWidth)
+      window.addEventListener('resize', this.getWindowHeight)
+
+      // Init
+      this.getWindowWidth()
+      this.getWindowHeight()
+    })
+  },
+
+  methods: {
+    getWindowWidth (event) {
+      this.windowWidth = document.documentElement.clientWidth
+    },
+
+    getWindowHeight (event) {
+      this.windowHeight = document.documentElement.clientHeight
+    }
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.getWindowWidth)
+    window.removeEventListener('resize', this.getWindowHeight)
   }
 }
 </script>
@@ -46,26 +70,7 @@ export default {
   margin: 115px auto 0 auto;
 }
 
-.VueCarousel-slide {
-  position: relative;
-  // background: lightgray;
-  color: #fff;
-  font-family: Arial;
-  font-size: 24px;
-  text-align: center;
-}
-
-.VueCarousel-slide > img {
-  display: contents;
-  min-width: 75%;
-  margin: 15px auto 0 auto;
-}
-
-.label {
-  padding: none;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-100%, -50%);
+.carousel-3d-container figure{
+  margin: 0;
 }
 </style>
